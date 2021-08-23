@@ -53,23 +53,29 @@
 #' @export
 fseqdist <- function(fslist, label, method=c("original","disco"), mc.iter=999){
   ## PREPROCESSING
-  dtype = check_list_summaries("fseqdist", fslist)
-  label = as.factor(label)
-  if (length(label)!=length(fslist)){
-    stop("* fseqdist : length of 'label' must be equal to length of 'fslist'.")
-  }
+  label    = as.factor(label)
   mymethod = match.arg(method)
   myiter   = max(99, round(mc.iter))
   
   ## L2 DISTANCE
-  dmat = TDAkit::fsdist(fslist, p=2, as.dist=FALSE)
-  dobj = stats::as.dist(dmat)
+  if (inherits(fslist, "dist")){
+    dobj = fslist
+    dmat = as.matrix(dobj) 
+  } else {
+    dtype = check_list_summaries("fseqdist", fslist)
+    dobj  = TDAkit::fsdist(fslist, p=2, as.dist=TRUE)
+    dmat  = as.matrix(dobj)
+  }
+  if (attr(dobj, "Size")!=length(label)){
+    stop("* fseqdist : length of 'label' must be equal to length of 'fslist'.")
+  }
   
   ## LABEL
   ulabels = sort(unique(label), decreasing = FALSE)
   nunique = length(ulabels)
   orderlab = base::order(label)
   mat.dist = dmat[orderlab,orderlab]
+  obj.dist = stats::as.dist(mat.dist)
   vec.size = rep(0,nunique)
   for (i in 1:nunique){
     vec.size[i] = length(which(label==ulabels[i]))
@@ -77,10 +83,10 @@ fseqdist <- function(fslist, label, method=c("original","disco"), mc.iter=999){
   
   # COMPUTATION : MAIN CASE
   if (all(mymethod=="original")){
-    output = energy::eqdist.etest(dmat, vec.size, distance=TRUE, method="original", R=myiter)
+    output = energy::eqdist.etest(obj.dist, vec.size, distance=TRUE, method="original", R=myiter)
     output$data.name = deparse(substitute(fslist))
   } else {
-    output = energy::eqdist.etest(dmat, vec.size, distance=TRUE, method="discoB", R=myiter)
+    output = energy::eqdist.etest(obj.dist, vec.size, distance=TRUE, method="discoB", R=myiter)
     output$method    = "DISCO : between-sample component approach"
     output$data.name = deparse(substitute(fslist))
   } 

@@ -1,3 +1,13 @@
+# TDAkit 0.1.2
+
+* Change of maintainer's contact.
+
+# TDAkit 0.1.1
+
+* Added `plkernel` to compute the persistence landscape kernel.
+* `fssc05Z` is added for spectral clustering by Zelnik-Manor and Perona (2005).
+* Fixed some errors regarding `dist` objects.
+
 # TDAkit 0.1.0
 
 * Initial release.
