@@ -1,8 +1,8 @@
-78f4be3e37a03bc743e85f187b2de54a *DESCRIPTION
+9eec3ee15e5be4561a9ebf6876e43536 *DESCRIPTION
 f4d60635cfecdd5d7c4aeb57bc23eed3 *LICENSE
-511a86dd721009a73f614d2529b8ba2b *NAMESPACE
+d1d490993fb97e2110846e5765d85b67 *NAMESPACE
 89312616a1bb402cf101de5df8517e68 *NEWS.md
-faf3e38d20e34bce5e34733b1c6cafcc *R/RcppExports.R
+5c4046065b5987393d1e81a39b42d825 *R/RcppExports.R
 b2ea6ef3916ef85cd70748ec51b4de08 *R/auxiliary.R
 b59e4526f9f879a1e540b478148ea318 *R/auxiliary_adjust.R
 146e61f8ad9c0b24cce3d67cd75c523d *R/auxiliary_checkers.R
@@ -14,7 +14,7 @@ d5a79f54c3481bdd5ab00f316d1eb160 *R/convert_diag2silhouette.R
 93d0b8d1935b1e9c2e6a206466a689e0 *R/homology_diagRips.R
 8fa1b026608d822dd31e27e456df9618 *R/landscape_plkernel.R
 6b933a49539f5f3955277c04bf93b199 *R/later_median.R
-da003f96e292da5f1ea0f5102ec74ad2 *R/package-TDAkit.R
+1550767b37cd679fadb7b2f228b5e057 *R/package-TDAkit.R
 2adc6122954fd8836110e1fddf7c6515 *R/summaries_dist.R
 08ced17f0ff7991c22f60ea6663fbb14 *R/summaries_dist2.R
 88e3a1e8ebc13144dc4e72e64c445c13 *R/summaries_eqdist.R
@@ -29,8 +29,8 @@ c90bd7fd4c8330973d97d81215081ca6 *R/summaries_sum.R
 cb33b726341becaff9f40949eb3a5df1 *R/summaries_tsne.R
 eafac2ccf5b61eb8eaf324f73bf117c1 *R/utility_plot_homology.R
 8a2dbb275b12f32e5dc24d65cea52ddb *R/utility_plot_landscape.R
-5e3889c24ab277b8ab8e969852690723 *R/zzz.R
-444a2deeda0db3d7efaae374b1209430 *build/partial.rdb
+eb87b88588ca0a68145a127ffa4b7e60 *R/zzz.R
+79378d071ebfaaea8b563d1c76c5f6ab *build/partial.rdb
 bde27a96bdb0318da905feae46c2fed3 *inst/REFERENCES.bib
 d3d6f6aa9ea4cc3ba33ece31daeb915f *man/diag2landscape.Rd
 939f14648d06e3dfd9ad580c60144528 *man/diag2silhouette.Rd
@@ -52,8 +52,8 @@ f0079ccf762506a5d2d3e6194565e4fd *man/gen2holes.Rd
 1fe69aae844f5ff2a063957ce85e0fdb *man/plkernel.Rd
 222dda64280d6f5f34ff1d4bb450a78a *man/plot.homology.Rd
 3a7cb0c5a7cbb8ca394620346f4e297a *man/plot.landscape.Rd
-61059660eb073d93e00e8ee054237071 *src/Makevars
-61059660eb073d93e00e8ee054237071 *src/Makevars.win
+1f399255f8d0c33b9d67db64792a50c1 *src/Makevars
+1f399255f8d0c33b9d67db64792a50c1 *src/Makevars.win
 7604dbaf399215515ccff2cb998fc8c5 *src/RcppExports.cpp
 f251ce9b83d0b26271e3b9e181c41c41 *src/cpp_integral.cpp
 0e314664470389f48534ae4439ec8e04 *src/cpp_routines.cpp
